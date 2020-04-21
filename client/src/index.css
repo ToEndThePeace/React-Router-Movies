@@ -43,10 +43,14 @@ body {
 .saved-movie {
   margin: 0 10px;
 }
-.saved-active {
-  color: blue;
-  border: 1px solid grey;
-  padding: 5px;
+a:visited {
+  color: inherit;
+}
+a.active:any-link {
+  color: red;
+}
+a.active:any-link::before {
+  content: "> ";
 }
 .save-wrapper {
   position: relative;
@@ -60,6 +64,7 @@ body {
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
+  cursor: pointer;
 }
 .save-button:hover {
   background-color: green;
